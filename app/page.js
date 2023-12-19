@@ -1,113 +1,135 @@
-import Image from 'next/image'
+"use client"
+import { BsFillMoonStarsFill, BsLinkedin, BsFacebook, BsGithub  } from "react-icons/bs";
+import Image from "next/image";
+import deved from "../public/dev-ed-wave.png";
+import design from "../public/design.png";
+import code from "../public/code.png";
+import web1 from "../public/web1.png";
+import web2 from "../public/web2.png";
+
+import { useState } from "react";
+
 
 export default function Home() {
+
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className={ darkMode ? "dark" : ""}>
+      <main className='bg-white text-black px-10 md:px-20 lg:px-40 dark:bg-gray-900 transition-colors duration-300 ease-in-out'>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Introduction */}
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className="min-h-screen">
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <nav className='py-10 mb-12 flex justify-between dark:text-white transition-colors duration-300 ease-in-out'>
+            <h1 className='text-xl'>thrasys</h1>
+            <ul className='flex items-center'>
+              <li><BsFillMoonStarsFill className='cursor-pointer text-2xl' onClick={() => setDarkMode(!darkMode)}/></li>
+              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="https://drive.google.com/u/0/uc?id=1tbKXc6oW0A43oW_uKAAvZWNGE4NNxYzt&export=download" >Resume</a></li>
+            </ul>
+          </nav>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          <div className='text-center p-10 py-10 dark:text-white '>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium font-firacode md:text-6xl'>Tasdikur Rahman</h2>
+            <h3 className='text-2xl py-2 md:text-3xl'>Web Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-white'>Just started out in the Web Development Journey.</p>
+            <p className='text-md text-gray-800 dark:text-white'> Always excited to explore new concepts and implement creative details in projects!</p>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <div className='text-5xl flex justify-center gap-10 py-3 text-gray-600 dark:text-white'>
+            <a href="https://github.com/thrasys" target="_blank" rel="noopener noreferrer">
+              <BsGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <BsLinkedin />
+            </a>
+            <a href="https://www.facebook.com/Tasdikur/" target="_blank" rel="noopener noreferrer">
+              <BsFacebook />
+            </a>
+          </div>
+
+          <div className="mx-auto relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+            <Image src={ deved } layout="fill" objectFit="cover"/>
+          </div>
+        </section>
+
+        {/* Skills */}
+
+        <section>
+          <div>
+            <h3 className="text-3xl py-1 mt-10 dark:text-white">Services I Offer</h3>
+            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white">
+              Although I've just started out professionally as a <em>Web Developer</em>, I have quite a decent experience with Software Development too!
+            </p>
+          </div>
+
+          <div className="lg:flex justify-around gap-10">
+            <div className=" dark:text-white">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+              <div className="flex justify-center">
+                <Image src={ design } width={100} height={100}/>
+              </div>
+              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+              <p className="py-2">
+                Creating clean and minimalisitc designs that feel organic.
+              </p>
+              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+              <p className="text-gray-800 py-1 dark:text-white">Illustrator</p>
+              <p className="text-gray-800 py-1 dark:text-white">Photoshop</p>
+              <p className="text-gray-800 py-1 dark:text-white">Figma</p>
+              <p className="text-gray-800 py-1 dark:text-white">Canva</p>
+              <p className="text-gray-800 py-1 dark:text-white">Photopea</p>
+            </div>
+          </div>
+
+          <div className=" dark:text-white">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+              <div className="flex justify-center">
+                <Image src={ code } width={100} height={100}/>
+              </div>
+              <h3 className="text-lg font-medium pt-8 pb-2">Clean Coding</h3>
+              <p className="py-2">
+                Writing precise and robust code to ensure user satisfaction.
+              </p>
+              <h4 className="py-4 text-teal-600">Languages I'm Familiar With</h4>
+              <p className="text-gray-800 py-1 dark:text-white">Python</p>
+              <p className="text-gray-800 py-1 dark:text-white">Java</p>
+              <p className="text-gray-800 py-1 dark:text-white">C</p>
+              <p className="text-gray-800 py-1 dark:text-white">C++</p>
+              <p className="text-gray-800 py-1 dark:text-white">Bash</p>
+            </div>
+          </div>
+          </div>
+          
+        </section>
+
+        {/* Portfolio */}
+
+        <section>
+          <div>
+            <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
+          </div>
+
+          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+            <div className="basis-1/2 flex-1">
+              <div className="dark:text-white">
+                <h3 className="text-2xl py-1">Project: <a href="https://github.com/thrasys/cats" className="text-blue-800">Cats!</a></h3>
+                <p className="m-10">It's my very first project while learning JavaScript. I have tried to implement the most basic concepts of the language. I did not bother to style up the content as I wanted to focus on using API calls, with or without tokens.</p>
+              </div>
+              <Image src={ web1 } className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className="basis-1/2 flex-1">
+              <div className="dark:text-white">
+                <h3 className="text-2xl py-1">Project: <a href="https://github.com/thrasys/scattered-thoughts" className="text-blue-800">Scattered Thoughts</a></h3>
+                <p className="m-10">A short blog writing application written with ReactJS and vanilla CSS. With this project, I wanted to challange myself to build a ReactJS application in the shortest time possible. Having completed within a day, this project implements the core utilities of ReactJS, such as states, custom hooks, routing and also a JSON server to fetch and store data.</p>
+              </div>
+              <Image src={ web2 } className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }

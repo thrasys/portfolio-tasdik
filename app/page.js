@@ -60,7 +60,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 mt-10 dark:text-white">Services I Offer</h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-white">
-              Although I've just started out professionally as a <em>Web Developer</em>, I have quite a decent experience with Software Development too!
+              Although I have just started out professionally as a <em>Web Developer</em>, I have quite a decent experience with Software Development too!
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
               <p className="py-2">
                 Writing precise and robust code to ensure user satisfaction.
               </p>
-              <h4 className="py-4 text-teal-600">Languages I'm Familiar With</h4>
+              <h4 className="py-4 text-teal-600">Languages I am Familiar With</h4>
               <p className="text-gray-800 py-1 dark:text-white">Python</p>
               <p className="text-gray-800 py-1 dark:text-white">Java</p>
               <p className="text-gray-800 py-1 dark:text-white">C</p>
@@ -115,7 +115,7 @@ export default function Home() {
             <div className="basis-1/2 flex-1">
               <div className="dark:text-white">
                 <h3 className="text-2xl py-1">Project: <a href="https://github.com/thrasys/cats" className="text-blue-800">Cats!</a></h3>
-                <p className="m-10">It's my very first project while learning JavaScript. I have tried to implement the most basic concepts of the language. I did not bother to style up the content as I wanted to focus on using API calls, with or without tokens.</p>
+                <p className="m-10">It is my very first project while learning JavaScript. I have tried to implement the most basic concepts of the language. I did not bother to style up the content as I wanted to focus on using API calls, with or without tokens.</p>
               </div>
               <Image src={ web1 } alt="" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
             </div>

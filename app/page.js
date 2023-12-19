@@ -50,7 +50,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={ deved } layout="fill" objectFit="cover"/>
+            <Image src={ deved } alt="User avatar waiving" layout="fill" objectFit="cover"/>
           </div>
         </section>
 
@@ -68,7 +68,7 @@ export default function Home() {
             <div className=" dark:text-white">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
               <div className="flex justify-center">
-                <Image src={ design } width={100} height={100}/>
+                <Image src={ design } alt="" width={100} height={100}/>
               </div>
               <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
               <p className="py-2">
@@ -86,7 +86,7 @@ export default function Home() {
           <div className=" dark:text-white">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
               <div className="flex justify-center">
-                <Image src={ code } width={100} height={100}/>
+                <Image src={ code } alt="" width={100} height={100}/>
               </div>
               <h3 className="text-lg font-medium pt-8 pb-2">Clean Coding</h3>
               <p className="py-2">
@@ -117,7 +117,7 @@ export default function Home() {
                 <h3 className="text-2xl py-1">Project: <a href="https://github.com/thrasys/cats" className="text-blue-800">Cats!</a></h3>
                 <p className="m-10">It's my very first project while learning JavaScript. I have tried to implement the most basic concepts of the language. I did not bother to style up the content as I wanted to focus on using API calls, with or without tokens.</p>
               </div>
-              <Image src={ web1 } className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
+              <Image src={ web1 } alt="" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
             </div>
 
             <div className="basis-1/2 flex-1">
@@ -125,7 +125,7 @@ export default function Home() {
                 <h3 className="text-2xl py-1">Project: <a href="https://github.com/thrasys/scattered-thoughts" className="text-blue-800">Scattered Thoughts</a></h3>
                 <p className="m-10">A short blog writing application written with ReactJS and vanilla CSS. With this project, I wanted to challange myself to build a ReactJS application in the shortest time possible. Having completed within a day, this project implements the core utilities of ReactJS, such as states, custom hooks, routing and also a JSON server to fetch and store data.</p>
               </div>
-              <Image src={ web2 } className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
+              <Image src={ web2 } alt="" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
             </div>
           </div>
         </section>
